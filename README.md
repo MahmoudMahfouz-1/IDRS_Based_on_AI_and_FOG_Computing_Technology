@@ -33,7 +33,7 @@ The platform contains the code to run the **Interior Camera** and apply face rec
 
 then will call a method called **RunFile** to access the raspberry pi using SSH connection and run the ***Self-Driving Mechanism*** then if there is a problem it will close and run the ***Remote Driving Mechanism*** 
 
->This is the [Platform](Source_Code\Full_Platform\system_Activate.py) code 
+**This is the [Platform](Source_Code\Full_Platform\system_Activate.py) code**
 
 
 **The Self-Driving Mechanism** uses opencv and numpy and other libraries to apply lane and line detection to make the correct decisions to make the car move correctly
@@ -41,14 +41,14 @@ then will call a method called **RunFile** to access the raspberry pi using SSH 
 >This is the output of **The Self-Driving Mechanism**
 ![Self-Driving Mechanism](Resources/self.PNG)
 
->This is the [Self-Driving Mechanism](Source_Code\Self_Driving_Mechanism\enhancedLaneDetection.py) code 
+**This is the [Self-Driving Mechanism](Source_Code\Self_Driving_Mechanism\enhancedLaneDetection.py) code** 
 
 **The Remote Driving Mechanism** Uses Flask and other libraries
 to create a web page that shows the live feed from the front camera and some buttons to control the car
 >Output of **The Remote Driving Mechanism**
 ![Remote Driving Mechanism](Resources/Remote.PNG) 
 
->This is the [Remote Driving Mechanism](Source_Code\Remote_Driving_Mechanism\app.py) code 
+**This is the [Remote Driving Mechanism](Source_Code\Remote_Driving_Mechanism\app.py) code**
 
 
 ***This is the [Project Book](Resources\Book) For full project details***
