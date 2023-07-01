@@ -13,19 +13,19 @@ Based on the data which has been collected about the driver's health status, his
 This process starts by sending a rescue acknowledge to the remote control office . In conjunction with this step, the main processing  initializes a ***Self-Driving Mechanism*** to the vehicle, this process aimed to drive the vehicle until reaching the nearest safe place for parking (Using AI and IOT).
 in case of self-driving mechanism failure due to environmental reasons, the second mechanism which is ***Remote Driving Mechanism*** will take control . their will be a human remote driving  from the remote control office.
 
->**IDRS** will initiate a warning operation to the surrounding environment through a Sound-light warning alarm and sending an acknowledge to the surrounding vehicles through the V2V protocol (future work).
+**IDRS** will initiate a warning operation to the surrounding environment through a Sound-light warning alarm and sending an acknowledge to the surrounding vehicles through the V2V protocol (future work).
 
-This is a diagram to discribe the *architecture* and the *flow* of the system 
-
+>This is a diagram to discribe the *architecture* and the *flow* of the system 
 ![System Arch](Resources/Arch.PNG)
 
->***This REPO will contain some of the source code to this project and some discribtion to how it works.***
+***This REPO will contain some of the source code to this project and some discribtion to how it works.***
 
 *Know that we are using a **Raspberry Pi** as main controller to control the car and a **Laptop** as the system main office.* 
 
 The platform contains the code to run the **Interior Camera** and apply face recognition and eye detection to determine if the driver is conscious or not, Also the method to take the *status* from the **Interior Camera** and the **Smart Watch** to detrmine the driver exact medical condition then in case of a problem this file contains method to activate the system (Called **SystemActivate**) 
 
 >***Interior Camera***
+
 ![Awake](Resources/awake.PNG) 
 ![Sleeping](Resources/sleeping.PNG)
 
