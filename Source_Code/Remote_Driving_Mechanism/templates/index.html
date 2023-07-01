@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RC Car Control</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        img {
+            width: 640px;
+            height: 480px;
+            margin-top: 20px;
+            border: 1px solid #000;
+        }
+
+        button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>RC Car Control</h1>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    <br>
+    <button onclick="sendCommand('forward', true)" onmouseleave="sendCommand('forward', false)">Forward</button>
+    <button onclick="sendCommand('backward', true)" onmouseleave="sendCommand('backward', false)">Backward</button>
+    <button onclick="sendCommand('left', true)" onmouseleave="sendCommand('left', false)">Left</button>
+    <button onclick="sendCommand('right', true)" onmouseleave="sendCommand('right', false)">Right</button>
+    <button onclick="sendCommand('stop', true)" onmouseleave="sendCommand('stop', false)">Stop</button>
+    <script>
+        // Function to send control command to the server
+        function sendCommand(command, value) {
+            $.post('/control', { 'command': command, 'value': value });
+        }
+    </script>
+</body>
+</html>
